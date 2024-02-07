@@ -1,0 +1,52 @@
+.aboutUsContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  @media (min-width: 1024px) {
+    width: 50%;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.aboutUsPhoto{
+  width: 304px;
+  height: 385px;
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 1024px) {
+    margin: 0;
+  }
+}
+
+.aboutUsTextContainer{
+  width: 304px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.aboutUsTitle{
+  text-align: center;
+
+}
+
+.aboutUsText{
+  text-align: center;
+
+}
+
+.aboutUsLink{
+  padding: 10px 20px !important;
+  background: #80233A;
+  color: white !important;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}

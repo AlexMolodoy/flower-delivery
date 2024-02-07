@@ -1,0 +1,90 @@
+.footerContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px 0;
+  flex-wrap: wrap;
+  @media (min-width: 1024px) {
+    width: 1024px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px 0;
+  flex-wrap: wrap;
+
+}
+
+.servicesContainer{
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+}
+
+
+.footerLinks{
+  padding: 5px 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+.contactsContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10px;
+  width: 320px;
+}
+
+.instagramIcon{
+  width: 27px;
+  height: 27px;
+  margin-right: 3px;
+}
+
+.footerLinksContainer{
+  padding: 5px 0;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phoneIcon{
+  width: 24px;
+  height: 24px;
+  margin-right: 3px;
+
+}
+
+.paymentsContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+
+  @media (min-width: 1024px) {
+    width: 1024px;
+  }
+}
+
+.footerIconSize{
+  width: 77px;
+  height: 52px;
+}
+
+.mir{
+  width: 80px;
+  height: 32px;
+}
+
+.rights{
+  display: flex;
+  justify-content: center;
+}

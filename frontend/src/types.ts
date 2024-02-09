@@ -5,6 +5,7 @@ export type TShopData = {
 }
 
 export type TProduct = {
+    id: string
     title: string
     price: string
     description: string

@@ -2,6 +2,7 @@ import { TProduct } from '../../types.ts'
 
 export const ProductsData: TProduct[] = [
     {
+        id: '1',
         title: 'HUGS & KISSES',
         price: '100$',
         description:
@@ -9,6 +10,7 @@ export const ProductsData: TProduct[] = [
         imagePath: '',
     },
     {
+        id: '2',
         title: 'HUGS & KISSES',
         price: '100$',
         description:
@@ -16,6 +18,7 @@ export const ProductsData: TProduct[] = [
         imagePath: '',
     },
     {
+        id: '3',
         title: 'HUGS & KISSES',
         price: '100$',
         description:
@@ -23,6 +26,7 @@ export const ProductsData: TProduct[] = [
         imagePath: '',
     },
     {
+        id: '4',
         title: 'HUGS & KISSES',
         price: '100$',
         description:
@@ -30,6 +34,7 @@ export const ProductsData: TProduct[] = [
         imagePath: '',
     },
     {
+        id: '5',
         title: 'HUGS & KISSES',
         price: '100$',
         description:
@@ -37,6 +42,7 @@ export const ProductsData: TProduct[] = [
         imagePath: '',
     },
     {
+        id: '6',
         title: 'HUGS & KISSES',
         price: '100$',
         description:
@@ -44,6 +50,7 @@ export const ProductsData: TProduct[] = [
         imagePath: '',
     },
     {
+        id: '7',
         title: 'HUGS & KISSES',
         price: '100$',
         description:
@@ -51,6 +58,7 @@ export const ProductsData: TProduct[] = [
         imagePath: '',
     },
     {
+        id: '8',
         title: 'HUGS & KISSES',
         price: '100$',
         description:

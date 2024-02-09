@@ -11,11 +11,11 @@ const { Search } = Input
 const headerNavigationLinks = [
     {
         title: 'SHOP ALL',
-        path: '/',
+        path: '/products',
     },
     {
         title: 'BY PRICE',
-        path: '/',
+        path: '/products?sort=by_price',
     },
     {
         title: 'CONTACTS',
@@ -36,15 +36,15 @@ const Header = () => {
                 <img src={MainLogo} className={styles.headerMenuLogo} alt="Main logo" />
                 {/*<Search className={styles.headerMenuSearch} />*/}
                 <div className={styles.headerMenuNavigation}>
-                    <a href="/delivery">
+                    <Button type="text">
                         <img src={DeliveryIcon} alt="Delivery icon" />
-                    </a>
-                    <a href="/person">
-                        <img src={PersonIcon} alt="Person icon" />
-                    </a>
-                    <a href="/cart">
+                    </Button>
+                    {/*<a href="/person">*/}
+                    {/*    <img src={PersonIcon} alt="Person icon" />*/}
+                    {/*</a>*/}
+                    <Button type="text">
                         <img src={CartIcon} alt="Cart icon" />
-                    </a>
+                    </Button>
                     <Button type="text" icon={<MenuOutlined />} />
                 </div>
             </div>

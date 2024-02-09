@@ -7,6 +7,7 @@ import { HashRouter } from 'react-router-dom'
 import { TShopData } from './types.ts'
 import MainPage from './pages/MainPage/MainPage.tsx'
 import ProductsPage from './pages/Products/ProductsPage.tsx'
+import ProductCard from './pages/ProductCard/[id].tsx'
 
 const shopData: TShopData = {
     phone: '+7 999 999 99 99',
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
     {
         path: '/products',
         element: <ProductsPage />,
+    },
+    {
+        path: `/products/:id`,
+        element: <ProductCard />,
     },
 ])
 function App() {

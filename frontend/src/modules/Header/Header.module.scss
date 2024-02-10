@@ -1,5 +1,7 @@
 .headerContainer{
   width: 100%;
+  margin-bottom: 15px;
+
 }
 
 .headerMenu{
@@ -17,12 +19,16 @@
   }
 }
 
+.invis{
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
 .headerMenuLogo{
   width: 67px;
   height: 69px;
-  @media (min-width: 426px) {
-
-  }
 }
 
 .headerMenuSearch{
@@ -35,7 +41,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     width: 30%;
   }
 }
@@ -44,15 +50,25 @@
   margin: 0;
 }
 
+.headerMenuNavButton{
+  display: block;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
 .headerNavigation{
   display: flex;
   flex-direction: column;
   margin-top: 3px;
-  @media (min-width: 1024px) {
-    width: 1024px;
+  @media (min-width: 768px) {
+    width: 768px;
     margin-left: auto;
     margin-right: auto;
     flex-direction: row;
+  }
+  @media (min-width: 1024px) {
+    width: 1024px;
   }
 }
 
@@ -66,7 +82,7 @@
   border-radius: 2px;
   margin-bottom: 3px;
   text-decoration: none;
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     border: none;
   }
 }

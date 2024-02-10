@@ -9,5 +9,5 @@ export type TProduct = {
     title: string
     price: string
     description: string
-    imagePath: string
+    imagePath: string[]
 }

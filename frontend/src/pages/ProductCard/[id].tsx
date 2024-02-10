@@ -1,6 +1,7 @@
-import { Alert, Typography } from 'antd'
+import { Alert, Button, Typography } from 'antd'
 import { ProductsData } from '../../Mock/MockProductsPreview/MockProductsPreview.ts'
 import { useNavigate, useLocation } from 'react-router-dom'
+import styles from './Product.module.scss'
 
 const ProductCard = () => {
     const navigate = useNavigate()
@@ -23,19 +24,19 @@ const ProductCard = () => {
     }
     const photosBlock =
         product.imagePath
-            .split(',')
             .slice(1)
-            .map((photo: string | undefined) => <img src={photo} alt="" />) ?? []
+            .map((photo: string | undefined) => <img src={photo} className={styles.photo_s} alt="" />) ?? []
     return (
-        <div>
-            <div>
-                <div>{photosBlock}</div>
-                <img src={product.imagePath.slice(0, 1)} alt="" />
+        <div className={styles.productContainer}>
+            <div className={styles.photoContainer}>
+                <div className={styles.photoBlock}>{photosBlock}</div>
+                <img src={product.imagePath[0]} className={styles.photo} alt="" />
             </div>
-            <div>
-                <Typography.Title>{product.title}</Typography.Title>
-                <Typography.Text>{product.price}</Typography.Text>
-                <Typography.Text>{product.description}</Typography.Text>
+            <div className={styles.textContainer}>
+                <Typography.Title className={styles.title}>{product.title}</Typography.Title>
+                <Typography.Text className={styles.price}>{product.price}</Typography.Text>
+                <Typography.Text className={styles.text}>{product.description}</Typography.Text>
+                <Button className={styles.cartButton}>Go to cart: {product.price}</Button>
             </div>
         </div>
     )

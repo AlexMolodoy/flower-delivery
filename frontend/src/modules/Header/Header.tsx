@@ -3,8 +3,9 @@ import MainLogo from '../../assets/Logo_icon.png'
 import PersonIcon from '../../assets/Person_icon.png'
 import DeliveryIcon from '../../assets/Delivery_icon.png'
 import CartIcon from '../../assets/Cart_icon.png'
-import { Button, Divider, Input } from 'antd'
+import { Button, Divider, Input, Typography } from 'antd'
 import { MenuOutlined } from '@ant-design/icons'
+import { useState } from 'react'
 
 const { Search } = Input
 
@@ -24,6 +25,7 @@ const headerNavigationLinks = [
 ]
 
 const Header = () => {
+    const [openMenuNav, setOpenMenuNav] = useState(false)
     const headerNavigationButtons = headerNavigationLinks.map(({ title, path }) => (
         <a className={styles.headerNavigationItems} href={path}>
             {title}
@@ -33,7 +35,9 @@ const Header = () => {
     return (
         <div className={styles.headerContainer}>
             <div className={styles.headerMenu}>
-                <img src={MainLogo} className={styles.headerMenuLogo} alt="Main logo" />
+                <Typography.Link href={'/'}>
+                    <img src={MainLogo} className={styles.headerMenuLogo} alt="Main logo" />
+                </Typography.Link>
                 {/*<Search className={styles.headerMenuSearch} />*/}
                 <div className={styles.headerMenuNavigation}>
                     <Button type="text">
@@ -45,11 +49,18 @@ const Header = () => {
                     <Button type="text">
                         <img src={CartIcon} alt="Cart icon" />
                     </Button>
-                    <Button type="text" icon={<MenuOutlined />} />
+                    <Button
+                        type="text"
+                        className={styles.headerMenuNavButton}
+                        icon={<MenuOutlined />}
+                        onClick={() => {
+                            setOpenMenuNav(!openMenuNav)
+                        }}
+                    />
                 </div>
             </div>
             <Divider className={styles.headerDivider} />
-            <div className={styles.headerNavigation}>{headerNavigationButtons}</div>
+            <div className={openMenuNav ? styles.headerNavigation : styles.invis}>{headerNavigationButtons}</div>
         </div>
     )
 }
